@@ -1,10 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
-    <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
-    </body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>BurgerOnline</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <main>
+        <h1>Welcome to BurgerOnline</h1>
+        <section>
+            <h2>Choose your burger:</h2>
+            <p>This is where you choose your burger!</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>The Fire Burger</th>
+                        <th>The Ice Burger</th>
+                        <th>The Air Burger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4409427.jpg" alt="The Fire Burger"
+                                height="200px" width="200px">
+                        </td>
+                        <td>
+                            <img src="https://2.bp.blogspot.com/-zminNfx5OZY/Ukp4hVoPS3I/AAAAAAAABGI/kn06RWGS73o/s1600/Doughnut+burgers.jpg"
+                                alt="The Ice Burger" height="200px" width="200px">
+                        </td>
+                        <td>
+                            <img src="data:image/jpeg;base64,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"
+                                alt="The Air Burger" height="200px" width="200px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <ul>
+                                <li>Gluten</li>
+                                <li>Lactose</li>
+                                <li>Meat</li>
+                                <li>Various vegetables</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Gluten</li>
+                                <li>Lactose</li>
+                                <li>Various Nuts</li>
+                            </ul>
+                        </td>
+                        <td>
+
+                            <ul>
+                                <li>Gluten</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </section>
+        <section>
+            <h2>Delivery Address:</h2>
+            <p>This is where you put in your address!</p>
+            <form>
+                <p>
+                    <label for="fullname">Full Name</label><br>
+                    <input type="text" id="fullname" required="required" name="fn" placeholder="First- and Last name">
+                </p>
+                <p>
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                </p>
+                <p>
+                    <label for="street">Street</label><br>
+                    <input type="text" id="street" name="st" placeholder="Street name">
+                </p>
+                <p>
+                    <label for="house">House</label><br>
+                    <input type="text" id="house" name="hs" placeholder="House Number">
+                </p>
+
+                <p>
+                    <label for="payment">Choose payment method</label><br>
+                    <select id="payment" name="payment">
+                        <option>Credit Card</option>
+                        <option>PayPal</option>
+                        <option>Invoice</option>
+                        <option>Check by mail</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="gender">Choose gender</label><br>
+                    <input type="radio" id="gender" name="gdr" checked="checked">Do not wish to provide<br>
+                    <input type="radio" id="gender" name="gdr">Female<br>
+                    <input type="radio" id="gender" name="gdr">Male<br>
+                </p>
+
+            </form>
+            <p>
+                <button type="submit"><img src="https://image.flaticon.com/icons/svg/60/60525.svg" height="10px" width="10px">Send
+                    Info</button>
+            </p>
+        </section>
+    </main>
+    <footer>BurgerOnline copyright etc.</footer>
+</body>
+
 </html>
