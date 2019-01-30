@@ -7,8 +7,22 @@ body {
     font-size: 1.2em;
 }
 
-table > *{
-    width: 10%;
+.table>* {
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+
+}
+
+.tablehead {
+    grid-row: 1 / span 3;
+}
+
+.tablepic {
+    grid-row: 2 / span 3;
+}
+
+.tableIng {
+    grid-row: 3 / span 3;
 }
 
 .ingredients {
@@ -42,6 +56,12 @@ button:hover {
     cursor: pointer;
 }
 
+#headline {
+    position: absolute;
+    margin: 30px;
+    font-size: 5.3em;
+}
+
 #footer {
     margin: 5px 0px 0px 10px;
 }
@@ -60,6 +80,7 @@ p.info,
 
 #burgerHeader {
     opacity: 0.5;
-    width: 100%;
+    overflow: hidden;
     height: 200px;
+    width: 100%;
 }
