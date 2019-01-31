@@ -2,9 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Dosis');
 
+@media screen and (max-width: 700px) {
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
 body {
     font-family: Arial;
     font-size: 1.2em;
+}
+
+.boldItalics {
+    font-weight: bolder;
+    font-style: italic;
 }
 
 .table>* {
@@ -58,6 +69,7 @@ button:hover {
 
 #headline {
     position: absolute;
+    top: 15px;
     margin: 30px;
     font-size: 5.3em;
 }

@@ -9,11 +9,12 @@
 </head>
 
 <body>
+    <header>
+        <img id="burgerHeader" src="https://bullyssportsbar.com/wp-content/uploads/2014/12/burger-header.jpg">
+        <h1 id="headline">Welcome to BurgerOnline</h1>
+    </header>
     <main>
-        <section class="header">
-            <h1 id="headline">Welcome to BurgerOnline</h1>
-            <img id="burgerHeader" src="https://bullyssportsbar.com/wp-content/uploads/2014/12/burger-header.jpg">
-        </section>
+
         <section class="burgerSection">
             <h2>Choose your burger:</h2>
             <p>This is where you choose your burger!</p>
@@ -41,19 +42,19 @@
                 <div class="tableIng">
 
                     <ul>
-                        <li>Gluten</li>
-                        <li>Lactose</li>
-                        <li>Meat</li>
-                        <li>Various vegetables</li>
+                        <li><span class="boldItalics">Contains:</span> Gluten</li>
+                        <li><span class="boldItalics">Contains:</span> Lactose</li>
+                        <li><span class="boldItalics">Protein:</span> Meat</li>
+                        <li><span class="boldItalics">Extra: </span>Various vegetables</li>
                     </ul>
 
                     <ul>
-                        <li>Gluten</li>
-                        <li>Lactose</li>
-                        <li>Various Nuts</li>
+                        <li><span class="boldItalics">Contains: </span>Gluten</li>
+                        <li><span class="boldItalics">Contains: </span>Lactose</li>
+                        <li><span class="boldItalics">Contains: </span>Various Nuts</li>
                     </ul>
                     <ul>
-                        <li>Gluten</li>
+                        <li><span class="boldItalics">Contains: </span>Gluten</li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +81,7 @@
                 </p>
 
                 <p>
-                    <label for="payment">Choose payment method</label><br>
+                    <label for="payment">Choose payment method:</label><br>
                     <select id="payment" name="payment">
                         <option>Credit Card</option>
                         <option>PayPal</option>
@@ -89,8 +90,8 @@
                     </select>
                 </p>
                 <p>
-                    <label for="gender">Choose gender</label><br>
-                    <input type="radio" id="gender" name="gdr" checked="checked">Do not wish to provide<br>
+                    <label for="gender">Choose gender:</label><br>
+                    <input type="radio" id="gender" name="gdr" checked="checked">Non-binary<br>
                     <input type="radio" id="gender" name="gdr">Female<br>
                     <input type="radio" id="gender" name="gdr">Male<br>
                 </p>
