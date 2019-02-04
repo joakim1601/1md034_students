@@ -1,9 +1,10 @@
 var vm = new Vue({
     el: '#burgerSection',
     data: {
-        burgers
-    }
+        burgers,
+    }   
 });
+
 
 new Vue({
     el: '#submit',
@@ -11,8 +12,14 @@ new Vue({
         markDone: function () {
             console.log(info_form());
         }
-    },
-    data: {
-        info_form()
     }
 });
+
+/*
+new Vue({
+    el: '#infoSection',
+    data: {
+        let: infoArray = info_form(),
+    }
+})
+*/

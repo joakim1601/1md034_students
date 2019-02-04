@@ -1,5 +1,6 @@
 var myButton = document.getElementById('submit');
 
+
 function info_form() {
     let fullname = document.getElementById("fullname").value;
     let email = document.getElementById("email").value;
@@ -11,6 +12,18 @@ function info_form() {
 
     return info;
 }
+
+
+/*
+var infoArray = [{
+    "fullname": document.getElementById("fullname").value,
+    "email": document.getElementById("email").value,
+    "street": document.getElementById("street").value,
+    "house": document.getElementById("house"),
+    "gender": document.querySelector('input[name="gender"]:checked').value,
+    "payment": document.getElementById("payment").value,
+}]
+*/
 
 
 // // You can pass a defined function as above (no parentheses), or provide an anonymous function

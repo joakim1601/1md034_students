@@ -83,9 +83,9 @@
                         Info</button>
                 </div>
             </p>
-            <div id="showOrder" v-if="">
-
-            </div>
+           <div id="showOrder" v-for="info in infoArray">
+               {{ info.fullname }}
+           </div>
         </section>
 
     </main>
