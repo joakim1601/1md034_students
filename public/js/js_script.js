@@ -2,17 +2,16 @@ var myButton = document.getElementById('submit');
 
 
 function info_form() {
-    let fullname = document.getElementById("fullname").value;
-    let email = document.getElementById("email").value;
-    let street = document.getElementById("street").value;
-    let house = document.getElementById("house").value;
-    let gender = document.querySelector('input[name="gender"]:checked').value;
-    let payment = document.getElementById("payment").value;
+    let fullname = "Full name: " + document.getElementById("fullname").value
+    let email = "Email: " + document.getElementById("email").value;
+    let street = "Street: " + document.getElementById("street").value;
+    let house = "House: " + document.getElementById("house").value;
+    let gender = "Gender: " + document.querySelector('input[name="gender"]:checked').value;
+    let payment = "Payment: " + document.getElementById("payment").value;
     let info = [fullname, email, street, house, gender, payment];
 
     return info;
 }
-
 
 /*
 var infoArray = [{

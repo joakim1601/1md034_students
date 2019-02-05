@@ -2,16 +2,19 @@ var vm = new Vue({
     el: '#burgerSection',
     data: {
         burgers,
-    }   
+    }
 });
 
 
 new Vue({
-    el: '#submit',
+    el: '#infoSection',
     methods: {
         markDone: function () {
-            console.log(info_form());
+            this.order = info_form();
         }
+    },
+    data: {
+        order: null,
     }
 });
 
