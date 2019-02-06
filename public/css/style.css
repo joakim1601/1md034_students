@@ -49,6 +49,18 @@ body {
     font-weight: bold;
 }
 
+#burgerSection input {
+    display: none;
+}
+
+#burgerSection input:checked+label {
+    background-color: green;
+}
+
+#burgerSection input:hover+label {
+    cursor: pointer;
+}
+
 #burgerSection {
     background: black;
     color: white;

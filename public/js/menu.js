@@ -14,19 +14,19 @@ let burgers = [{
     "hasGluten": false,
     "image": imageString
 }, {
-    "name": "Ostburgare",
+    "name": "Ostburgare3",
     "kCal": 850,
     "hasLactose": true,
     "hasGluten": false,
     "image": imageString
 }, {
-    "name": "Ostburgare",
+    "name": "Ostburgare4",
     "kCal": 850,
     "hasLactose": true,
     "hasGluten": false,
     "image": imageString
 }, {
-    "name": "Ostburgare",
+    "name": "Ostburgare5",
     "kCal": 850,
     "hasLactose": true,
     "hasGluten": false,
