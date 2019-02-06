@@ -31,9 +31,9 @@
                         <img :src="burger.image" :alt="burger.name" :title="burger.name" width="200px">
 
                         <ul>
-                            <li>{{ burger.kCal }} kCal</li> <br>
-                            <li v-if="burger.hasLactose == true"> {{burger.hasLactose}}</li> <br>
-                            <li v-if="burger.hasGluten == true">{{burger.hasGluten}}</li> <br>
+                            <li>{{ burger.kCal }} kCal</li>
+                            <li v-if="burger.hasLactose == true"> Contains Dairy</li>
+                            <li v-if="burger.hasGluten == true">Contains Gluten</li>
                         </ul>
                     </label>
                 </div>
