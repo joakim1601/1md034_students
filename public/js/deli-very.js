@@ -27,7 +27,7 @@ var vm2 = new Vue({
         y: event.currentTarget.getBoundingClientRect().top
       };
       this.orders = [{
-        orderId: this.getNext(),
+        orderId: this.tempOrder,
         details: {
           x: event.clientX - 10 - offset.x,
           y: event.clientY - 10 - offset.y
@@ -40,12 +40,12 @@ var vm2 = new Vue({
       this.order = info_form();
       this.checkedBurgers = [...document.querySelectorAll('#burgerSection input:checked')].map(x => x.value);
       socket.emit("addOrder", {
-        orderId: this.orders[0].orderId,
+        //orderId: this.orders[0].orderId,
         details: this.orders[0].details,
         orderInfo: this.order,
 
         orderItems: this.checkedBurgers,
-        
+
       });
     }
   }
