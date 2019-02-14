@@ -4,20 +4,16 @@
 'use strict';
 var socket = io();
 
-var vm = new Vue({
-  el: '#dots',
+var vm2 = new Vue({
+  el: 'main',
   data: {
     orders: {},
+    order: null,
+    checkedBurgers: null,
+    burgers,
+    tempOrder: "T",
   },
-  created: function () {
-    socket.on('initialize', function (data) {
-      this.orders = data.orders;
-    }.bind(this));
 
-    socket.on('currentQueue', function (data) {
-      this.orders = data.orders;
-    }.bind(this));
-  },
   methods: {
     getNext: function () {
       var lastOrder = Object.keys(this.orders).reduce(function (last, next) {
@@ -25,14 +21,32 @@ var vm = new Vue({
       }, 0);
       return lastOrder + 1;
     },
-    addOrder: function (event) {
-      var offset = {x: event.currentTarget.getBoundingClientRect().left,
-                    y: event.currentTarget.getBoundingClientRect().top};
-      socket.emit("addOrder", { orderId: this.getNext(),
-                                details: { x: event.clientX - 10 - offset.x,
-                                           y: event.clientY - 10 - offset.y },
-                                orderItems: ["Beans", "Curry"]
-                              });
+    displayOrder: function (event) {
+      var offset = {
+        x: event.currentTarget.getBoundingClientRect().left,
+        y: event.currentTarget.getBoundingClientRect().top
+      };
+      this.orders = [{
+        orderId: this.getNext(),
+        details: {
+          x: event.clientX - 10 - offset.x,
+          y: event.clientY - 10 - offset.y
+        },
+      }];
+    },
+
+    addOrder: function () {
+
+      this.order = info_form();
+      this.checkedBurgers = [...document.querySelectorAll('#burgerSection input:checked')].map(x => x.value);
+      socket.emit("addOrder", {
+        orderId: this.orders[0].orderId,
+        details: this.orders[0].details,
+        orderInfo: this.order,
+
+        orderItems: this.checkedBurgers,
+        
+      });
     }
   }
 });

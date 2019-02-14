@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
+    <script src="/vue/vue.js" defer></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <!-- <script defer src="https://vuejs.org/js/vue.js"></script> -->
     <script defer type="text/javascript" src="js/menu.js"></script>
-    <script defer type="text/javascript" src="../public/js/menu.js"></script>
-    <script defer src="https://vuejs.org/js/vue.js"></script>
+    <!-- <script defer src="js/vue_script.js"></script> -->
     <script defer src="js/js_script.js"></script>
-    <script defer src="js/vue_script.js"></script>
-    <script defer src="../public/js/js_script.js"></script>
-    <script defer src="../public/js/vue_script.js"></script>
+    <script defer src="js/deli-very.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="../public/css/style.css">
     <title>BurgerOnline</title>
@@ -50,14 +50,6 @@
                     <label for="email">E-mail</label><br>
                     <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
                 </p>
-                <p>
-                    <label for="street">Street</label><br>
-                    <input type="text" id="street" name="st" placeholder="Street name">
-                </p>
-                <p>
-                    <label for="house">House number</label><br>
-                    <input type="number" id="house" name="hs" placeholder="House Number">
-                </p>
 
                 <p>
                     <label for="payment">Choose payment method:</label><br>
@@ -76,9 +68,18 @@
                 </p>
 
             </form>
+
+            <div class="view-box">
+                <div id="dots" v-on:click="displayOrder">
+                    <div v-for="order in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                        {{ order.orderId }}
+                    </div>
+                </div>
+            </div>
+
             <p>
                 <div id="submit">
-                    <button v-on:click="markDone" class="submit" type="submit"><img src="https://image.flaticon.com/icons/svg/60/60525.svg"
+                    <button v-on:click="addOrder" class="submit" type="submit"><img src="https://image.flaticon.com/icons/svg/60/60525.svg"
                             height="10px" width="10px">Send
                         Info</button>
                 </div>

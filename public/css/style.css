@@ -1,6 +1,7 @@
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Dosis');
+@import "deli-very.css";
 
 @media screen and (max-width: 700px) {
     h1 {
